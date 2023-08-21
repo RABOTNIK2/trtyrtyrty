@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 20 2023 г., 11:31
+-- Время создания: Авг 21 2023 г., 11:09
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.1.17
 
@@ -42,7 +42,11 @@ CREATE TABLE `argue` (
 INSERT INTO `argue` (`id`, `oglavlenie`, `poema`, `datee`, `user_id_arg`) VALUES
 (11, 'rhthth', 'thhththtyte', '2023-08-19', 24),
 (12, 'rtytey5ty', 'rtyrtyrtyrt', '2023-08-19', 24),
-(13, 'hyrthethrt', 'hrthtrhrththr', '2023-08-20', 24);
+(13, 'hyrthethrt', 'hrthtrhrththr', '2023-08-20', 24),
+(14, 'grghrhrhrh', 'hrrhhrrhhrrhrhrhrhrthtj', '2023-08-21', 30),
+(15, 'grhrhtjrjryjy', 'tjtyjyrhyrhth', '2023-08-21', 30),
+(16, 'httjtrjttjt', 'httjtrjttjt', '2023-08-21', 30),
+(17, 'httjtrjttjthttjtrjttjt', 'httjtrjttjthttjtrjttjt', '2023-08-21', 30);
 
 -- --------------------------------------------------------
 
@@ -82,7 +86,9 @@ INSERT INTO `publication` (`id`, `zagalovok`, `incridients`, `cookin_steps`, `ph
 (42, 'gthrttrt', 'rthrtrtrtth', 'rtrtrtrtrthrth', '8b370cfce4e735c83f97aaf8e7260597.jpg', '2023-08-19', 24),
 (43, 'реккекекке', 'еккеркеркере', 'рекрекркерекрк', '1647174466_38-vsegda-pomnim-com-p-reka-les-foto-41 (1).jpg', '2023-08-20', 24),
 (46, 'укекенеккн', 'укекенеккнукекенеккн', 'укекенеккнукекенеккнукекенеккн', 'png-clipart-pancake-pancake.png', '2023-08-20', 28),
-(47, 'рерккркркнр', 'рерккркркнррерккркркнр', 'рерккркркнррерккркркнррерккркркнр', '0_1425034615.jpg', '2023-08-20', 28);
+(47, 'рерккркркнр', 'рерккркркнррерккркркнр', 'рерккркркнррерккркркнррерккркркнр', '0_1425034615.jpg', '2023-08-20', 28),
+(50, 'rgreehthhtrthrhtr', 'rgreehthhtrthrhtr', 'rgreehthhtrthrhtr', '1663865857_34-mykaleidoscope-ru-p-iziskannie-blyuda-yeda-krasivo-44.jpg', '2023-08-21', 30),
+(51, 'rgehtrht', 'trrthrty', 'trhgtrhrrthrt', '1677730811_2-3.jpg', '2023-08-21', 30);
 
 -- --------------------------------------------------------
 
@@ -107,7 +113,8 @@ INSERT INTO `users` (`id`, `login`, `password`, `email`, `age`, `photoshop`) VAL
 (19, 'jttjtjj', '$2y$10$q/s1sZAbwxurd3i6bNmVou4kUj9ASQlH3et1vH1PyjmuBMdnnO7V2', 'jttjtjj@digifjij', 77, '0_1425034615.jpg'),
 (20, 'rjjyrjyryj111', '$2y$10$tYxMWgk5d1dIE0aRokzuPODca8NH3xIifzr7METpFlKed43Ch/XIC', 'gandon3365@grf55', 33, 'i (4).webp'),
 (24, 'аериререер', '$2y$10$ZdHHqKqjBxhzSS.xni8wK.2Wyg2hDyUTkP9uQW3BS/zxWRlBMEMy6', NULL, 18, 'dummy-profile-image-male.jpg'),
-(28, 'пкпкпкпкпк', '$2y$10$GV58WfB71uWHqoNbBdKPYuIKDMSBp3p0mjO59QA3AVN6XlG9VfZ1S', NULL, 18, 'dummy-profile-image-male.jpg');
+(28, 'пкпкпкпкпк', '$2y$10$GV58WfB71uWHqoNbBdKPYuIKDMSBp3p0mjO59QA3AVN6XlG9VfZ1S', NULL, 18, 'dummy-profile-image-male.jpg'),
+(30, 'Бабуля Николавна22', '$2y$10$/0ML5lOU6WO.ESYmkkWXNuQ5d2GkadQNCprlNaDVv1ER7hihmGxxi', 'rrerhrrhr@54b4u6', 70, '1649921183_32-kartinkof-club-p-rzhachnie-kartinki-starie-babki-33.jpg');
 
 --
 -- Индексы сохранённых таблиц
@@ -149,25 +156,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `argue`
 --
 ALTER TABLE `argue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT для таблицы `publication`
 --
 ALTER TABLE `publication`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

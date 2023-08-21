@@ -71,9 +71,8 @@ if($_SESSION["auth"] == true){?>
                     <h5 class="text-light"><?=$user21["login"]?></h5>
                 </div>
                 <div>
-                    <h5 class="text-light"><?=$user['datee'] ?><br>
-                    
-                    </h5>
+                    <h5 class="text-light">Дата публикации:</h5>
+                    <h5 class="text-light"><?=$user['datee'] ?></h5>
                 </div>
             </div>
             <div class="photo">
@@ -123,7 +122,7 @@ if($_SESSION["auth"] == true){?>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="./profile.php">Профиль</a>
+                    <a class="nav-link active text-light" aria-current="page" href="./registration.php">Вход</a>
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link text-light" href="./argue.php">Обсуждение</a>

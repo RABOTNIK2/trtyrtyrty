@@ -116,14 +116,7 @@ if($_SESSION["auth"] == true){?>
                     <?php $res21.='<a class="btn btn-outline-light" href=./recipe.php?id='.$elem['id'].' role="button"> Посмотреть полностью</a>';
                     echo $res21;
                     $res21=""; ?>
-                    <div class="samo_like">
-                      <div class="obogur">
-                        <img src='img/thumb-up.png'>
-                      </div>
-                      <div class="obogur2">
-                        <img src='img/thumbs-down.png'>
-                      </div>
-                    </div>
+                    
 
                     <!-- <a class="btn btn-outline-light" href= "" role="button">Прочитать полностью</a> -->
                 </div>

@@ -284,6 +284,8 @@
 }
 .based_div{
   background-color: rgba(247, 247, 9, 0.589);
+  height: 100vh;
+  
 
 }
 .container12{
@@ -352,4 +354,7 @@
   border:3px solid white;
   border-radius:10px;
   margin-left:10px;
+}
+.based_div{
+
 }

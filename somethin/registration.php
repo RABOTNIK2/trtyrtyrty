@@ -17,10 +17,7 @@
   error_reporting(E_ALL);
   ini_set('display_errors', 'on');
 
-  // $login = $_POST['login'];
-  // $query = "SELECT * FROM users WHERE login='$login'"; // получаем юзера по логину
-  // $res = mysqli_query($link, $query);
-  // $user = mysqli_fetch_assoc($res);
+
 
  if (!empty($_POST['login']) and !empty($_POST['password'])) {
      $login = $_POST['login'];
@@ -32,7 +29,7 @@
      $result = mysqli_query($link, $query) or die(mysqli_error($link));
      $user = mysqli_fetch_assoc($result);
      if (!empty($user)) {
-         $hash = $user['password']; // соленый пароль из БД
+         $hash = $user['password']; 
          echo $hash;
          
         if (password_verify($_POST['password'], $hash)) {
@@ -51,18 +48,6 @@
 
      }
  
-    //  if (!empty($user)) {
-    //   // $_SESSION['auth'] = true;
-    //   // $id = mysqli_insert_id($link);
-
-    //   // $_SESSION['id'] = $id;
-    //   // header("Location: ./kyrsov.php");
-        
-       
-    //  } else{
-    //     // неверно ввел логин или пароль
-
-    //  }
      
 }
     

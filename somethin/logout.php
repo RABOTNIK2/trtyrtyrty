@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['auth']= null;
+$_SESSION['id']= null;
  ?>
 <!DOCTYPE html>
 <html lang="en">

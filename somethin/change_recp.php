@@ -4,8 +4,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -43,26 +43,33 @@ if(!empty($_POST['zagalovok']) and !empty($_POST['incridients']) and !empty($_PO
         // $query = "UPDATE publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps' WHERE id=$GOVNO ";
         // mysqli_query($link, $query);
         if (isset($_POST['upload'])) {
- 
           $filename = $_FILES["uploadfile"]["name"];
           $tempname = $_FILES["uploadfile"]["tmp_name"];
           $folder = "./image/" . $filename;
-        
-        
+
+          if(!empty($filename)){ 
           // Get all the submitted data from the form
-          $query = "UPDATE publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps',photo='$filename' WHERE id=$GOVNO ";
-          mysqli_query($link, $query) or die(mysqli_error($link));
+            $query = "UPDATE publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps',photo='$filename' WHERE id=$GOVNO ";
+            mysqli_query($link, $query) or die(mysqli_error($link));
+            error_reporting(E_ALL);
+            ini_set('display_errors', 'on');
          
         
           // Execute query
           
         
           // Now let's move the uploaded image into the folder: image
-          if (move_uploaded_file($tempname, $folder)) {
-              echo "<h3>  Image uploaded successfully!</h3>";
-          } else {
-              echo "<h3>  Failed to upload image!</h3>";
+            if (move_uploaded_file($tempname, $folder)) {
+                echo "<h3>  Image uploaded successfully!</h3>";
+            } else {
+                echo "<h3>  Failed to upload image!</h3>";
+            }
+
           }
+ 
+          
+        }else{
+          echo"чёто нето";
         }
            
     } else {
@@ -117,7 +124,7 @@ if($_SESSION["auth"] == true){?>
               <!-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> -->
               <input name="uploadfile" type="file" class="form-control"><br>
 
-              <input name="	zagalovok" type="text" class="form-control" placeholder="Напзвание"><br>
+              <input name="zagalovok" type="text" class="form-control" placeholder="Напзвание"><br>
               <input name="incridients" type="text" class="form-control" placeholder="Ингидиенты"><br>
               <input name="cookin_steps" type="text" class="form-control" placeholder="Как готовить"><br>
               <button type="submit" class="btn btn-outline-light" name="upload" id="vasy32">Отправить</button>     

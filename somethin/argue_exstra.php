@@ -146,6 +146,14 @@ if($_SESSION["auth"] == true){?>
                         </div>
                         
                         <p class="text-light" id="nabor_text"><?=$elem["content"]?></p>
+                        <?php
+                        // if($popa34==$popa1){
+                        //   $resultat='<a class="btn btn-outline-light" href=./del_comm.php?id='.$elem['id'].' role="button"> Удалить коммент</a>';
+
+                        // } 
+                        // echo $resultat;
+                        // $resultat="";
+                        ?>
                     </div>
                 </div>
               <?php }?>

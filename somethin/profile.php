@@ -69,12 +69,13 @@ if($_SESSION["auth"] == true){?>
             </div>
             <?php $query = "SELECT COUNT(*) as постов FROM publication WHERE users_id_pub=$popa";
                   $res = mysqli_query($link, $query) or die(mysqli_error($link));
-                  $user1 = mysqli_fetch_assoc($res);?>
+                  $user1 = mysqli_fetch_row($res);
+                  $user2=$user1[0];?>
             <div class="information">
                 <h4 class="text-light" id="stol"><span class="login"><?=$user['login']?></span></h4>
                 <p class="text-light">Возраст :<span class="age"><?= $user['age']?></span></p>
-                <p class="text-light">Количество постов:<span class="count"><?php print_r($user1)?> </span></p>
-                <p class="text-light">Дата регистрации</p>
+                <p class="text-light">Количество постов:<span class="count"><?php echo $user2;?> </span></p>
+                
                 <a class="btn btn-outline-light" href="./add_recipe.php" role="button">Добавить рецепт</a>
                 <a class="btn btn-outline-light" href="./add_argue.php" role="button">Добавить пост</a><br>
                 <a class="btn btn-outline-light" href="./change.php" role="button">Изменить профиль</a>
