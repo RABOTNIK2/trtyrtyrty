@@ -319,6 +319,7 @@
 }
 .guga{
   background-color: rgba(247, 247, 9, 0.589);
+  height: 100vh;
   
 
 }
@@ -327,6 +328,7 @@
   flex-direction: column;
   align-items: center;
   margin-top:50px;
+  height: 100vh;
 }
 .basa12{
   background-color:rgb(242, 236, 97);
@@ -355,6 +357,4 @@
   border-radius:10px;
   margin-left:10px;
 }
-.based_div{
 
-}

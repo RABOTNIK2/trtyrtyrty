@@ -4,8 +4,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -46,8 +46,8 @@ if(!empty($_POST['zagalovok']) and !empty($_POST['incridients']) and !empty($_PO
         if(!empty($filename)){
           $query = "INSERT INTO publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps', datee='$datee', users_id_pub='$users_id_pub', photo='$filename' ";
           mysqli_query($link, $query) or die(mysqli_error($link));
-          error_reporting(E_ALL);
-          ini_set('display_errors', 'on');
+          // error_reporting(E_ALL);
+          // ini_set('display_errors', 'on');
 
         }else{
           echo "пожалуйста выберете файл";
@@ -68,15 +68,15 @@ if(!empty($_POST['zagalovok']) and !empty($_POST['incridients']) and !empty($_PO
        
            
     } else {
-        echo "логин занят , выведем сообщение об этом";
+        echo "Такое блюдо уже есть";
           
     }
     // $query = "INSERT INTO publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps' ";
     // mysqli_query($link, $query);
 
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 'on');
 
 }
 

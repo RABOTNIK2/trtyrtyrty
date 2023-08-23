@@ -51,8 +51,8 @@ if(!empty($_POST['zagalovok']) and !empty($_POST['incridients']) and !empty($_PO
           // Get all the submitted data from the form
             $query = "UPDATE publication SET zagalovok='$zagalovok', incridients='$incridients', cookin_steps='$cookin_steps',photo='$filename' WHERE id=$GOVNO ";
             mysqli_query($link, $query) or die(mysqli_error($link));
-            error_reporting(E_ALL);
-            ini_set('display_errors', 'on');
+            // error_reporting(E_ALL);
+            // ini_set('display_errors', 'on');
          
         
           // Execute query
@@ -69,11 +69,11 @@ if(!empty($_POST['zagalovok']) and !empty($_POST['incridients']) and !empty($_PO
  
           
         }else{
-          echo"чёто нето";
+          echo"Вы не отправили файлы";
         }
            
     } else {
-        echo "логин занят , выведем сообщение об этом";
+        echo "Такое блюдо уже есть";
           
     }
     

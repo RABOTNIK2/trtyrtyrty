@@ -4,8 +4,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -152,9 +152,8 @@ $res22="";
   
   </div>
   <div class=" bg-warning" id="jopicol">
-      <h5 class="text-light">Пинать за сайт: Боярчука Александра Дмтриевича</h5><br>
-      <h5 class="text-light">Первый в очереди на исключение: Боярчук Александр Дмтриевич</h5><br>
-      <h4 class="text-light">типа копирайт</h4>
+      <h5 class="text-light">Типо копирайт</h5><br>
+      
   </div>
   
     </div>
@@ -277,9 +276,8 @@ $res22="";
   
   </div>
   <div class=" bg-warning" id="jopicol">
-      <h5 class="text-light">Пинать за сайт: Боярчука Александра Дмтриевича</h5><br>
-      <h5 class="text-light">Первый в очереди на исключение: Боярчук Александр Дмтриевич</h5><br>
-      <h4 class="text-light">типа копирайт</h4>
+      <h5 class="text-light">Типо копирайт</h5><br>
+
   </div>
   
     </div>

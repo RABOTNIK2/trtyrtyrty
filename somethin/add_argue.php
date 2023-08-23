@@ -4,8 +4,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -37,17 +37,17 @@ if(!empty($_POST['oglavlenie']) and !empty($_POST['poema']) ){
     if (empty($user)) {
         $query = "INSERT INTO argue SET oglavlenie='$oglavlenie', poema='$poema', user_id_arg='$user_id_arg', datee='$datee' ";
         mysqli_query($link, $query);
-        error_reporting(E_ALL);
-        ini_set('display_errors', 'on');
+        // error_reporting(E_ALL);
+        // ini_set('display_errors', 'on');
            
     } else {
-        echo "логин занят , выведем сообщение об этом";
+        echo " Кажется такую тему уже обсуждали";
           
     }
     
 
 }else{
-  echo "вы ввели пустой логин";
+  // echo "вы ввели пустые данные";
 }
     ?>
 <!DOCTYPE html>

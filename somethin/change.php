@@ -4,8 +4,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -48,8 +48,8 @@ if(!empty($_POST['login']) and !empty($_POST['password']) and !empty($_POST['age
         
           // Execute query
             mysqli_query($link, $query) or die(mysqli_error($link));
-            error_reporting(E_ALL);
-            ini_set('display_errors', 'on');
+            // error_reporting(E_ALL);
+            // ini_set('display_errors', 'on');
         
           // Now let's move the uploaded image into the folder: image
             if (move_uploaded_file($tempname, $folder)) {
@@ -64,10 +64,12 @@ if(!empty($_POST['login']) and !empty($_POST['password']) and !empty($_POST['age
           
  
         
+        }else{
+          echo "Вы не отправили файл";
         }
            
     } else {
-        echo "логин занят , выведем сообщение об этом";
+        echo "Такой логин уже есть";
           
     }
     

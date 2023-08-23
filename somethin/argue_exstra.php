@@ -5,8 +5,8 @@ $host="localhost";
 $user="root";
 $pass="";
 $bd="htth";
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 $link=mysqli_connect($host, $user, $pass, $bd );
 mysqli_query($link,"SET NAMES 'utf8'");
@@ -51,8 +51,8 @@ if(!empty($_POST['content'])  ){
 
   $query = "INSERT INTO comments SET content='$content', prenadlecit='$prenadlecit', user_id_comm='$user_id_comm' ";
   mysqli_query($link, $query)or die(mysqli_error($link));
-  error_reporting(E_ALL);
-  ini_set('display_errors', 'on');
+  // error_reporting(E_ALL);
+  // ini_set('display_errors', 'on');
          
   
         
